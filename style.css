@@ -1,0 +1,182 @@
+/* imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* custom fonts */
+@font-face {
+    font-family: 'Digital-7';
+    src: url("./assets/fonts/Digital-7.woff2") format('woff2'),
+         url("./assets/fonts/Digital-7.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --custom-font: 'Digital-7';
+    --lobster: 'Lobster', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: #222;
+    font-family: 'Open Sans', sans-serif;
+    background: url("./assets/small-screen-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 120%;
+}
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: .4em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.search-bar {
+    width: calc(100% - 4em);
+    border: none;
+    outline: none;
+    padding: .4em 1em;
+    border-radius: 18px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+}
+
+button {
+    margin: .5em;
+    border-radius: 50%;
+    border: none;
+    height: 3em;
+    width: 3em;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    font-size: 70%;
+    background: #000000d0;
+}
+
+footer .copyright {
+    padding: 1em;
+}
+
+/* hide dummy text while loading */
+.weather.loading {
+    visibility: hidden;
+}
+
+/* header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    background: #000000d0;
+}
+
+/* header logo */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-left: 5px;
+}
+
+.logo h1 {
+    font-size: 120%;
+    font-family: var(--lobster);
+    color: #eaeaea;
+}
+
+/* header location */
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.location span {
+    color: white;
+}
+
+/* header clock */
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5%;
+    width: 10%;
+}
+
+.clock span {
+    font-family: var(--custom-font);
+    font-size: 130%;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    
+    body {
+        background: url("./assets/big-screen-bg.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card {
+        width: 50vw;
+    }
+
+}
